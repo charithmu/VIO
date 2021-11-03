@@ -3,13 +3,13 @@
 using namespace bridge;
 
 int main(int argc, char** argv) {
-  ros::init(argc, argv, "PX4_realsense_bridge_node");
-  ros::NodeHandle nh("~");
-  PX4_Realsense_Bridge Bridge(nh);
+    ros::init(argc, argv, "PX4_realsense_bridge_node");
+    ros::NodeHandle nh("~");
+    PX4_Realsense_Bridge Bridge(nh);
 
-  ros::spin();
+    ros::spin();
 
-  Bridge.worker_.join();
+    Bridge.worker_.join();
 
-  return 0;
+    return 0;
 }
