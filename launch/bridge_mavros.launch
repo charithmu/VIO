@@ -1,7 +1,7 @@
 <launch>
   <arg name="ns" default="/"/>
   <arg name="fcu_url" default="/dev/ttyUSB0:921600"/>
-  <arg name="gcs_url" default="udp://:14550@localhost:14557" />   <!-- GCS link is provided by SITL -->
+  <arg name="gcs_url" default="udp://0.0.0.0:14555@192.168.1.126:14550" />   <!-- GCS link is provided by SITL -->
   <arg name="tgt_system" default="1" />
   <arg name="tgt_component" default="1" />
   
