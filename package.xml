@@ -49,8 +49,8 @@
   <build_depend>geometry_msgs</build_depend>
   <build_depend>mav_msgs</build_depend>
   <build_depend>sensor_msgs</build_depend>
-  <build_depend>tf</build_depend>
   <build_depend>tf2</build_depend>
+  <build_depend>tf2_ros</build_depend>
   <build_depend>pcl_ros</build_depend>
   <build_depend>mavros</build_depend>
   <build_depend>mavros_extras</build_depend>
@@ -65,8 +65,8 @@
   <run_depend>mav_msgs</run_depend>
   <run_depend>sensor_msgs</run_depend>
   <run_depend>octomap</run_depend>
-  <run_depend>tf</run_depend>
   <run_depend>tf2</run_depend>
+  <run_depend>tf2_ros</run_depend>
   <run_depend>pcl_ros</run_depend>
   <run_depend>mavros</run_depend>
   <run_depend>mavros_extras</run_depend>
