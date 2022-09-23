@@ -8,6 +8,9 @@
 
 namespace bridge {
 
+/**
+ * Node Setup
+ */ 
 PX4_Realsense_Bridge::PX4_Realsense_Bridge(const ros::NodeHandle& nh) : nh_(nh) {
     // initialize subscribers
     odom_sub_ = nh_.subscribe<const nav_msgs::Odometry&>("/camera/odom/sample_throttled", 10, &PX4_Realsense_Bridge::odomCallback, this);
@@ -24,6 +27,9 @@ PX4_Realsense_Bridge::PX4_Realsense_Bridge(const ros::NodeHandle& nh) : nh_(nh) 
 
 PX4_Realsense_Bridge::~PX4_Realsense_Bridge() {}
 
+/**
+ * Odometry CallBack
+ */
 void PX4_Realsense_Bridge::odomCallback(const nav_msgs::Odometry& msg) {
 	
     // publish odometry msg
@@ -69,6 +75,9 @@ void PX4_Realsense_Bridge::odomCallback(const nav_msgs::Odometry& msg) {
     }
 }
 
+/**
+ * Status Publshing Process
+ */
 void PX4_Realsense_Bridge::publishSystemStatus() {
     while (ros::ok()) {
         ros::Duration(1).sleep();
