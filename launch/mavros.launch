@@ -2,19 +2,18 @@
   <arg name="ns" default="/"/>
   
   <!-- SITL -->
-  <arg name="fcu_url" default="udp://:14540@localhost:14557"/>
-  <arg name="gcs_url" default="" />
+  <!-- <arg name="fcu_url" default="udp://:14540@localhost:14557"/> -->
+  <!-- <arg name="gcs_url" default="" /> -->
 
   <!-- On Jetson and Pixhawk -->
-  <!-- <arg name="fcu_url" default="/dev/ttyUSB0:921600"/> -->
-  <!-- <arg name="gcs_url" default="udp://0.0.0.0:14555@192.168.1.126:14550" />  -->
+  <arg name="fcu_url" default="/dev/ttyUSB0:921600"/> -->
+  <arg name="gcs_url" default="udp://0.0.0.0:14555@192.168.1.126:14550" />
   
   <arg name="tgt_system" default="1" />
   <arg name="tgt_component" default="1" />
   
   <!-- Launch bridge -->
-  <include file="$(find px4_realsense_bridge)/launch/bridge.launch" >
-  </include>
+  <!-- <include file="$(find px4_realsense_bridge)/launch/bridge.launch" ></include> -->
 
   <!-- Launch MavROS -->
   <group ns="$(arg ns)">
